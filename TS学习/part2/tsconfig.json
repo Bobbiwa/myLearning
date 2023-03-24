@@ -1,0 +1,29 @@
+/*
+tsconfig.json是ts编译器的配置文件，ts编译器可根据此文件信息来对代码进行编译
+    "include"
+    "exclude"
+        路径：**表任意目录
+               *表任意文件
+*/
+{
+    "include": [
+        "./src/**/*"    //编译src下所有文件夹的所有文件 
+    ],
+    "exclude": [
+        "./src/hello/**/*"  //不编译src下的hello下的所有文件夹的所有文件
+    ],
+    "compilerOptions": {
+        "target": "ES6",  //指定编译后的ES版本
+        "module": "es6",   //指定编译后的模块化规范
+        "outDir": "./dist",  //指定编译后文件所在的目录
+        "allowJs": false,   //是否对Js文件进行编译，默认false
+
+        "strict": false,    //是否打开所有严格检查
+        "checkJs": false,   //是否检查Js文件进行检查，默认false
+        "removeComments": false,    //是否移除注释,默认false
+        "noEmit": false,     //不编译
+        "noEmitOnError": false,  //有错误时，不编译
+        "noImplicitAny": false,  //ts中不允出现许隐式的any类型，默认false
+        "noImplicitThis": false
+    }
+}

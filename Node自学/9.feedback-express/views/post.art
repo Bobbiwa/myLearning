@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+</head>
+
+<body>
+  <h1 style="margin-bottom: 30px">
+    <a href="/">Back Admin</a>
+  </h1>
+  <form action="/submitComment" method="post" >
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Your Name</label>
+      <input name="username" class="form-control" id="exampleFormControlInput1" placeholder="name">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Comment of Feedback</label>
+      <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="7"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+  </form>
+</body>
+
+</html>

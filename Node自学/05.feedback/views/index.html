@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+    浏览器收到HTML后，就开始从上到下依次解析，解析过程中遇到：
+    link, script, img, iframe, video, audio 等具有src或href属性标签时，
+    浏览器会再次发起新的请求（请求静态资源） 
+    -->
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <!-- 注意：在服务端中，文件中的路径就不要写成“相对路径”了，在server 它是url根路径的意思，
+    浏览器发请求时会自动带上 http://127.0.0.1:3000 前缀 -->
+</head>
+
+<body>
+    <a href="/post">
+        <button type="button" class="btn btn-primary" style="margin-bottom:30px ;">
+            Link to发布留言
+        </button>
+    </a>
+    <ul class="list-group">
+        {{each comments}}
+        <li class="list-group-item">{{$value.name}} 说：{{$value.message}}
+            <span style="margin-left: 1200px">{{$value.date}}</span>
+        </li>
+        {{/each}}
+
+    </ul>
+</body>
+
+</html>

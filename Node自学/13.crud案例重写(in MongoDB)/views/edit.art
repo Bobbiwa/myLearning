@@ -1,0 +1,29 @@
+
+<link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/public/css/index.css" rel="stylesheet">
+
+<div id="right" class="col-sm-9 col-sm-offset-3 col-md-10 col
+-md-offset-2 main">
+  <h1 class="page-header">Edit Student</h1>
+    <form action="/student/edit" method="post">
+        <!--  为了submit带上id -->
+        <input type="hidden" value="{{students.id}}" name="id">  
+        <div class="form-group">
+          <label for="exampleInputEmail1">Name</label>
+          <input name="name" type="text" class="form-control" id="exampleInputEmail1" placeholder="Name" value="{{students.name}}">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Sex</label>
+          <input name="gender" type="text" class="form-control" id="exampleInputPassword1" placeholder="Sex" value="{{students.gender}}">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Age</label>
+          <input name="age" type="number" class="form-control" id="exampleInputPassword1" placeholder="Age" value="{{students.age}}">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Hobby</label>
+          <input name="hobby" type="text" class="form-control" id="exampleInputPassword1" placeholder="Hobby" value="{{students.hobby}}">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form> 
+</div>

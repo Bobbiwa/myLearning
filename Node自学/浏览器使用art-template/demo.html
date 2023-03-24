@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script src="./node_modules/art-template/lib/template-web.js"></script>
+
+<!-- 模板 -->
+<script type="text/template" id="tpl">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <p>大家好，我系{{name}}</p>
+    </body>
+    </html>
+</script>
+
+<script>
+    const ret = template('tpl', {
+        name: '渣渣辉'
+    })
+    console.log(ret);
+</script>
+
+</html>

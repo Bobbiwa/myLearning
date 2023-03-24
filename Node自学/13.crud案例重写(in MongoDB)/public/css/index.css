@@ -1,0 +1,26 @@
+#left {
+    width: 100px;
+}
+
+#right {
+    width: 700px;
+}
+
+.row {
+    margin-top: 50px;
+}
+
+img {
+    border-radius: 59%;
+}
+
+.col-xs-6 > h4 {
+    margin-left: 50px;
+}
+.col-xs-6 > .text-muted {
+    margin-left: 30px;
+}
+
+#add-student {
+    margin-top: 20px;
+}
